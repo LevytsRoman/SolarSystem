@@ -1,0 +1,250 @@
+/* Orbit nimation */
+/* Starpulse animation */
+@-moz-keyframes starPulse {
+    from { opacity: 1;}
+    to   { opacity: .2;}
+}
+
+@-o-keyframes starPulse {
+    from { opacity: 1;}
+    to   { opacity: .2;}
+}
+
+@-webkit-keyframes starPulse {
+    from { opacity: 1;}
+    to   { opacity: .2;}
+}
+
+@keyframes starPulse {
+    from { opacity: 1;}
+    to   { opacity: .2;}
+}
+/* Sunfire animation */
+@-moz-keyframes sunFire {
+    from {
+        -webkit-box-shadow: 0 0 50px #f5c91a;
+        -moz-box-shadow: 0 0 50px #f5c91a;
+        -o-box-shadow: 0 0 50px #f5c91a;
+        box-shadow: 0 0 50px #f5c91a;
+        
+    }
+    to   {
+        -webkit-box-shadow: 0 0 100px #f5c91a;
+        -moz-box-shadow: 0 0 100px #f5c91a;
+        box-shadow: 0 0 100px #f5c91a;
+    }
+}
+
+@-webkit-keyframes sunFire {
+    from {
+        -webkit-box-shadow: 0 0 50px #f5c91a;
+        -moz-box-shadow: 0 0 50px #f5c91a;
+        -o-box-shadow: 0 0 50px #f5c91a;
+        box-shadow: 0 0 50px #f5c91a;
+        
+    }
+    to   {
+        -webkit-box-shadow: 0 0 100px #f5c91a;
+        -moz-box-shadow: 0 0 100px #f5c91a;
+        box-shadow: 0 0 100px #f5c91a;
+    }
+}
+
+@-o-keyframes sunFire {    
+    from {
+        -webkit-box-shadow: 0 0 50px #f5c91a;
+        -moz-box-shadow: 0 0 50px #f5c91a;
+        -o-box-shadow: 0 0 50px #f5c91a;
+        box-shadow: 0 0 50px #f5c91a;
+        
+    }
+    to   {
+        -webkit-box-shadow: 0 0 100px #f5c91a;
+        -moz-box-shadow: 0 0 100px #f5c91a;
+        box-shadow: 0 0 100px #f5c91a;
+    }
+}
+
+@keyframes sunFire {
+    from {
+        -webkit-box-shadow: 0 0 50px #f5c91a;
+        -moz-box-shadow: 0 0 50px #f5c91a;
+        -o-box-shadow: 0 0 50px #f5c91a;
+        box-shadow: 0 0 50px #f5c91a;
+        
+    }
+    to   {
+        -webkit-box-shadow: 0 0 100px #f5c91a;
+        -moz-box-shadow: 0 0 100px #f5c91a;
+        box-shadow: 0 0 100px #f5c91a;
+    }
+}
+
+/* Rotate animation */
+@-webkit-keyframes spin {
+    from { transform: rotate(0); }
+    to   { transform: rotate(360deg); }
+}
+
+@-moz-keyframes spin {
+    from { transform: rotate(0); }
+    to   { transform: rotate(360deg); }
+}
+
+@-o-keyframes spin {
+    from { transform: rotate(0); }
+    to   { transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    from { transform: rotate(0); }
+    to   { transform: rotate(360deg); }
+}
+
+/* earth Orbit animation */
+
+@keyframes updown {
+    0% { transform: translateY(0);}
+    25% { transform: translateY(-150px); }
+    50% { transform: translateY(0px); }
+    75% { transform: translateY(150px); }
+    100% { transform: translateY(0px); }
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#universe {
+    background: black;
+    background: -webkit-radial-gradient(#555, #000);
+    background: -moz-radial-gradient(#555, #000);
+    background: -o-radial-gradient(#555, #000);
+    background: radial-gradient(#555, #000);
+}
+#stars {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background: url('images/stars.png');
+    
+    -webkit-animation: starPulse 4s infinite alternate;
+    -moz-animation: starPulse 4s infinite alternate;
+    -o-animation: starPulse 4s infinite alternate;
+    animation: starPulse 4s infinite alternate;
+}
+
+#sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+    margin-top: -100px;
+    margin-left: -100px;
+    height: 200px;
+    width: 200px;
+    
+    
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    
+    background: orange;
+    background: -webkit-radial-gradient(#f5c313, #ec7e08);
+    background: -moz-radial-gradient(#f5c313, #ec7e08);
+    background: -o-radial-gradient(#f5c313, #ec7e08);
+    background: radial-gradient(#f5c313, #ec7e08);
+    
+    -webkit-box-shadow: 0 0 50px #f5c91a;
+    -moz-box-shadow: 0 0 50px #f5c91a;
+    -o-box-shadow: 0 0 50px #f5c91a;
+    box-shadow: 0 0 50px #f5c91a;
+    
+    -webkit-animation: sunFire 4s infinite alternate;
+    -moz-animation: sunFire 4s infinite alternate;
+    -o-animation: sunFire 4s infinite alternate;
+    animation: sunFire 4s infinite alternate;
+}
+
+#earthOrbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -350px;
+    margin-left: -300px;
+    z-index: 4;
+    height: 700px;
+    width: 600px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%; 
+    
+    -webkit-animation: spin 10s linear infinite;
+    -moz-animation: spin 10s linear infinite;
+    -o-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+}
+#earth {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -40px;
+    
+    -webkit-animation: spin 3s linear infinite;
+    -moz-animation: spin 3s linear infinite;
+    -o-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+#moonOrbit {
+    
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 0;
+    margin-top: -60px;
+    margin-left: -20px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;   
+    
+    -webkit-animation: spin 4s linear infinite reverse;
+    -moz-animation: spin 4s linear infinite reverse;
+    -o-animation: spin 4s linear infinite reverse;
+    animation: spin 4s linear infinite reverse;
+}
+#moon {
+    height: 15px;
+    width: 15px;
+    
+    background: gray;
+    
+    background: -webkit-radial-gradient(#ddd, #888);
+    background: -moz-radial-gradient(#ddd, #888);
+    background: -o-radial-gradient(#ddd, #888);
+    background: radial-gradient(#ddd, #888);
+    
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;   
+}
+#orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -350px;
+    margin-left: -300px;
+    z-index: 4;
+    height: 700px;
+    width: 600px;
+    
+	animation: updown 10s infinite ease-in-out;
+}
